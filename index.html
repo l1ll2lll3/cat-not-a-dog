@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>냥냥 월드 - 고양이 천국</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🐱 냥냥 월드</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">홈</a></li>
+                <li><a href="#gallery" class="nav-link">갤러리</a></li>
+                <li><a href="#breeds" class="nav-link">품종</a></li>
+                <li><a href="#facts" class="nav-link">정보</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="section hero">
+        <div class="hero-content">
+            <h1 class="hero-title">고양이를 사랑하는 모든 분들을 위한 공간</h1>
+            <p class="hero-subtitle">귀여운 고양이들을 만나보세요!</p>
+            <button class="cta-button" onclick="scrollToGallery()">고양이 보러가기</button>
+        </div>
+        <div class="hero-image">
+            <img id="heroImage" src="https://cataas.com/cat/cute" alt="귀여운 고양이">
+        </div>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <h2 class="section-title">고양이 갤러리</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="loadCats('all')">전체</button>
+                <button class="filter-btn" onclick="loadCats('cute')">귀여운</button>
+                <button class="filter-btn" onclick="loadCats('sleeping')">자는</button>
+                <button class="filter-btn" onclick="loadCats('funny')">웃긴</button>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- 고양이 이미지들이 동적으로 추가됩니다 -->
+            </div>
+            <div class="load-more-container">
+                <button class="load-more-btn" onclick="loadMoreCats()">더 보기</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="breeds" class="section breeds-section">
+        <div class="container">
+            <h2 class="section-title">인기 고양이 품종</h2>
+            <div class="breeds-grid">
+                <div class="breed-card">
+                    <div class="breed-emoji">😸</div>
+                    <h3>페르시안</h3>
+                    <p>긴 털과 납작한 얼굴이 특징인 온순한 성격의 고양이</p>
+                </div>
+                <div class="breed-card">
+                    <div class="breed-emoji">😺</div>
+                    <h3>샴</h3>
+                    <p>파란 눈과 포인트 컬러를 가진 수다스러운 고양이</p>
+                </div>
+                <div class="breed-card">
+                    <div class="breed-emoji">😻</div>
+                    <h3>메인쿤</h3>
+                    <p>대형 품종으로 온화하고 친근한 성격의 고양이</p>
+                </div>
+                <div class="breed-card">
+                    <div class="breed-emoji">😽</div>
+                    <h3>브리티시 숏헤어</h3>
+                    <p>둥근 얼굴과 통통한 몸이 매력적인 고양이</p>
+                </div>
+                <div class="breed-card">
+                    <div class="breed-emoji">😼</div>
+                    <h3>벵갈</h3>
+                    <p>야생적인 외모와 활동적인 성격의 고양이</p>
+                </div>
+                <div class="breed-card">
+                    <div class="breed-emoji">😾</div>
+                    <h3>스핑크스</h3>
+                    <p>털이 없는 독특한 외모의 애교 많은 고양이</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="facts" class="section facts-section">
+        <div class="container">
+            <h2 class="section-title">고양이 재미있는 사실</h2>
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <div class="fact-icon">😴</div>
+                    <h3>수면 시간</h3>
+                    <p>고양이는 하루에 평균 12-16시간을 잠니다. 일생의 70%를 잠으로 보냅니다!</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">🏃</div>
+                    <h3>빠른 속도</h3>
+                    <p>고양이는 최대 시속 48km로 달릴 수 있으며, 순간 속도는 더 빠릅니다.</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">🔊</div>
+                    <h3>다양한 소리</h3>
+                    <p>고양이는 약 100가지의 다른 소리를 낼 수 있습니다. 개는 약 10가지만 가능합니다.</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">👃</div>
+                    <h3>독특한 코</h3>
+                    <p>고양이의 코 무늬는 사람의 지문처럼 모두 다릅니다.</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">🍬</div>
+                    <h3>단맛 무감각</h3>
+                    <p>고양이는 단맛을 느끼는 수용체가 없어서 달콤한 맛을 모릅니다.</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">🦘</div>
+                    <h3>점프 능력</h3>
+                    <p>고양이는 자신의 키보다 5-6배 높이 점프할 수 있습니다.</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">💧</div>
+                    <h3>물 싫어함</h3>
+                    <p>대부분의 고양이는 물을 싫어하지만, 터키시 반 같은 일부 품종은 수영을 즐깁니다.</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">🌙</div>
+                    <h3>야행성 동물</h3>
+                    <p>고양이는 어둠 속에서 사람보다 6배 더 잘 볼 수 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 냥냥 월드. 모든 고양이를 사랑합니다 🐾</p>
+            <p>이미지는 <a href="https://cataas.com" target="_blank">Cat as a Service</a>에서 제공됩니다.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
